@@ -1,0 +1,44 @@
+{
+  "name": "melange-deps",
+  "version": "0.0.1",
+  "description": "Install dev esy.json for melange-re/melange with npx",
+  "main": "index.sh",
+  "bin": {
+    "melange-deps": "index.sh"
+  },
+  "scripts": {
+    "start": "sh index.sh",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "git add . && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
+    "release": "npmpub",
+    "test": "echo \"Skip this step\"",
+    "github-release": "GITHUB_TOKEN=$(cat ~/.github_token.txt) npmpub github-release-from-changelog"
+  },
+  "keywords": [
+    "esy",
+    "reason native",
+    "ocaml",
+    "reason",
+    "reasonml",
+    "melange-re",
+    "melange",
+    "bucklescript",
+    "cli",
+    "rescript"
+  ],
+  "author": "Alain Armand",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idkjs/melange-deps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idkjs/melange-deps/issues"
+  },
+  "homepage": "https://github.com/idkjs/melange-deps#readme",
+  "devDependencies": {
+    "changelog": "^1.4.2",
+    "npmpub": "^5.0.0"
+  }
+}
