@@ -1,7 +1,7 @@
 {
   "name": "melange-deps",
   "version": "0.0.1",
-  "description": "Install dev esy.json for melange-re/melange with npx",
+  "description": "Install lastest version of dev esy.json for melange-re/melange with npx",
   "main": "index.sh",
   "bin": {
     "melange-deps": "index.sh"
