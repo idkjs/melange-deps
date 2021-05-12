@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start": "sh index.sh",
-    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
-    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:major": "changelog && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "changelog && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
     "release:patch": "git add . && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
     "release": "npmpub",
     "test": "echo \"Skip this step\"",
