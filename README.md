@@ -13,9 +13,7 @@ Running `npx melange-deps` will get you:
   "esy": {
     "buildsInSource": "unsafe",
     "build": [
-      "ln -sfn #{melange.install} node_modules/bs-platform",
-      "ln -sfn #{gentype.install} node_modules/gentype"
-    ]
+      "ln -sfn #{melange.install} node_modules/bs-platform"    ]
   },
   "installConfig": {
     "pnp": false
